@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from database_setup import Student,Base
+from database_setup import Student, Base
 
 engine = create_engine('sqlite:///student.db')
 
@@ -25,16 +25,16 @@ def add_into_db(student):
     session.commit()
 
 
-student = Student(name="Banty Kumar", address="401 Manas Dreams", city="Ranchi", stream="Computer", gender="Male")
+student = Student(name="Banty", address="401 Manas Dreams", city="Ranchi", stream="Computer", gender="Male")
 add_into_db(student)
 
-student = Student(name="Divyanish Bharindwal", address="Kothrud", city="Nashik", stream="Computer", gender="Male")
+student = Student(name="Alex", address="Kothrud", city="Nashik", stream="Computer", gender="Male")
 add_into_db(student)
 
-student = Student(name="Ashutosh Bhadoria", address="Karve Road", city="Aurangabad", stream="Computer", gender="Male")
+student = Student(name="Sam", address="Karve Road", city="Aurangabad", stream="Computer", gender="Male")
 add_into_db(student)
 
-student = Student(name="Indranil Bawane", address="Kothrud", city="Nagpur", stream="Computer", gender="Male")
+student = Student(name="Andrew", address="Kothrud", city="Nagpur", stream="Computer", gender="Male")
 add_into_db(student)
 
 student = Student(name="Zoe", address="Bawdhan", city="Patna", stream="Computer", gender="Female")
@@ -63,3 +63,5 @@ add_into_db(student)
 
 student = Student(name="Abby", address="1149 Chestnut St.", city="Kolkatta", stream="Infomation Technology", gender="Female")
 add_into_db(student)
+
+print "Students added"
